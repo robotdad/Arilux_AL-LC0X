@@ -53,6 +53,10 @@
 // #define RF_REMOTE
 // #define DEVICE_MODEL                           "LC0X"
 
+// Uncomment to enable physical switch connected to GPIO to toggle the light
+// #define TOGGLE_SWITCH
+// #define SWITCH_GPIO                            3
+
 // Wi-Fi
 #define WIFI_SSID                              ""
 #define WIFI_PASSWORD                          ""

@@ -103,10 +103,14 @@ WiFiClient        wifiClient;
 #endif
 PubSubClient        mqttClient(wifiClient);
 
+#ifdef TOGGLE_SWITCH
+  int switchState = LOW;
+#endif
+
 // Real values to write to the LEDs (ex. including brightness and state)
-byte realRed = 0;
-byte realGreen = 0;
-byte realBlue = 0;
+byte realRed = 255;     // lights on when powered to match state
+byte realGreen = 255;   // otherwise toggle switch appears not working  
+byte realBlue = 255;    // TODO: is there better way to define power on state?..
 
 // Globals for fade/transitions
 bool startFade = false;
@@ -831,6 +835,33 @@ void handleRFRemote(void) {
 #endif
 
 ///////////////////////////////////////////////////////////////////////////
+//  TOGGLE SWITCH
+///////////////////////////////////////////////////////////////////////////
+/*
+   Function called to handle switch state changes
+*/
+#ifdef TOGGLE_SWITCH
+void handleSwitch() {
+  if (digitalRead(SWITCH_GPIO) != switchState)
+  { // switch state changed
+    switchState = digitalRead(SWITCH_GPIO);
+    //  DEBUG_PRINT("Switch State changed to ");
+    //  DEBUG_PRINTLN(switchState);
+  
+    // toggle light on/off state
+    if (arilux.getState()) 
+      arilux.turnOff();
+    else 
+      arilux.turnOn();
+  
+    cmd = ARILUX_CMD_STATE_CHANGED;  // so that MQTT update sent out
+    delay(200); // debounce
+  }
+}
+#endif
+
+
+///////////////////////////////////////////////////////////////////////////
 //  CMD
 ///////////////////////////////////////////////////////////////////////////
 /*
@@ -945,6 +976,12 @@ void setup() {
   rcSwitch.enableReceive(ARILUX_RF_PIN);
 #endif
 
+#ifdef TOGGLE_SWITCH
+  // Init switch pin and state
+  pinMode(SWITCH_GPIO, INPUT_PULLUP);
+  switchState = digitalRead(SWITCH_GPIO);
+#endif
+
 #ifdef TLS
   // Check the fingerprint of CloudMQTT's SSL cert
   verifyFingerprint();
@@ -1027,6 +1064,11 @@ void loop() {
 #ifdef RF_REMOTE
   // Handle received RF codes from the remote
   handleRFRemote();
+#endif
+
+#ifdef TOGGLE_SWITCH
+// Handle physivcal switch state change
+  handleSwitch();
 #endif
 
   yield();
