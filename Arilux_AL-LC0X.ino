@@ -108,9 +108,9 @@ PubSubClient        mqttClient(wifiClient);
 #endif
 
 // Real values to write to the LEDs (ex. including brightness and state)
-byte realRed = 255;     // lights on when powered to match state
-byte realGreen = 255;   // otherwise toggle switch appears not working  
-byte realBlue = 255;    // TODO: is there better way to define power on state?..
+byte realRed = 255;     // somewhat better when only using toggle switch 
+byte realGreen = 255;   // temporary until color persistence is implemented 
+byte realBlue = 255;    // 
 
 // Globals for fade/transitions
 bool startFade = false;
@@ -558,7 +558,7 @@ void connectMQTT(void) {
           root.printTo(configBuf, sizeof(configBuf));
           publishToMQTT(HOME_ASSISTANT_MQTT_DISCOVERY_TOPIC, configBuf);
         #endif
-        flashSuccess(true);
+//        flashSuccess(true);  // this kind of screws up the initial state
       } else {
         DEBUG_PRINTLN(F("ERROR: The connection to the MQTT broker failed"));
         DEBUG_PRINT(F("Username: "));
