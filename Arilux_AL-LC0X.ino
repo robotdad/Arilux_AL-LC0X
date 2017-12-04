@@ -889,7 +889,8 @@ void setup() {
 
   sprintf(chipid, "%08X", ESP.getChipId());
   sprintf(MQTT_CLIENT_ID, HOST, chipid);
-  sprintf(friendlyName, "Arilux %s %s LED Controller %s", DEVICE_MODEL, arilux.getColorString(), chipid);
+  //sprintf(friendlyName, "Arilux %s %s LED Controller %s", DEVICE_MODEL, arilux.getColorString(), chipid);
+  sprintf(friendlyName, "What it does");  
   Serial.print("Hostname:");
   Serial.println(MQTT_CLIENT_ID);
   WiFi.hostname(MQTT_CLIENT_ID);
