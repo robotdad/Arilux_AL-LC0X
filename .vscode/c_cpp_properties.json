@@ -1,0 +1,132 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "/usr/include",
+                "/usr/local/include",
+                "${workspaceRoot}"
+            ],
+            "defines": [],
+            "intelliSenseMode": "clang-x64",
+            "browse": {
+                "path": [
+                    "/usr/include",
+                    "/usr/local/include",
+                    "${workspaceRoot}"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "macFrameworkPath": [
+                "/System/Library/Frameworks",
+                "/Library/Frameworks"
+            ]
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "/usr/include",
+                "/usr/local/include",
+                "${workspaceRoot}"
+            ],
+            "defines": [],
+            "intelliSenseMode": "clang-x64",
+            "browse": {
+                "path": [
+                    "/usr/include",
+                    "/usr/local/include",
+                    "${workspaceRoot}"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            }
+        },
+        {
+            "name": "Win32",
+            "includePath": [
+                "${env.USERPROFILE}/Documents/Arduino/libraries/ArduinoJson",
+                "${env.USERPROFILE}/Documents/Arduino/libraries/ArduinoJson/src",
+                "${env.USERPROFILE}/Documents/Arduino/libraries/IRremoteESP8266/src",
+                "${env.USERPROFILE}/Documents/Arduino/libraries/PubSubClient/src",
+                "${env.USERPROFILE}/Documents/Arduino/libraries/PubSubClient/tests/src/lib",
+                "${env.USERPROFILE}/Documents/Arduino/libraries/rc-switch",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/1.20.0-26-gb404fb9-2/lib/gcc/xtensa-lx106-elf/4.8.2/include",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/1.20.0-26-gb404fb9-2/lib/gcc/xtensa-lx106-elf/4.8.2/include-fixed",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/1.20.0-26-gb404fb9-2/lib/gcc/xtensa-lx106-elf/4.8.2/install-tools",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/1.20.0-26-gb404fb9-2/lib/gcc/xtensa-lx106-elf/4.8.2/install-tools/include",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/1.20.0-26-gb404fb9-2/xtensa-lx106-elf/include",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/1.20.0-26-gb404fb9-2/xtensa-lx106-elf/include/c++/4.8.2",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/1.20.0-26-gb404fb9-2/xtensa-lx106-elf/include/c++/4.8.2/backward",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/1.20.0-26-gb404fb9-2/xtensa-lx106-elf/include/c++/4.8.2/bits",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/1.20.0-26-gb404fb9-2/xtensa-lx106-elf/include/c++/4.8.2/debug",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/1.20.0-26-gb404fb9-2/xtensa-lx106-elf/include/c++/4.8.2/decimal",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/1.20.0-26-gb404fb9-2/xtensa-lx106-elf/include/c++/4.8.2/ext",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/1.20.0-26-gb404fb9-2/xtensa-lx106-elf/include/c++/4.8.2/profile",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/1.20.0-26-gb404fb9-2/xtensa-lx106-elf/include/c++/4.8.2/profile/impl",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/1.20.0-26-gb404fb9-2/xtensa-lx106-elf/include/c++/4.8.2/tr1",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/1.20.0-26-gb404fb9-2/xtensa-lx106-elf/include/c++/4.8.2/xtensa-lx106-elf",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/1.20.0-26-gb404fb9-2/xtensa-lx106-elf/include/c++/4.8.2/xtensa-lx106-elf/ext",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/1.20.0-26-gb404fb9-2/xtensa-lx106-elf/include/machine",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/1.20.0-26-gb404fb9-2/xtensa-lx106-elf/include/sys",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/tools/xtensa-lx106-elf-gcc/1.20.0-26-gb404fb9-2/xtensa-lx106-elf/include/xtensa/config",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/cores/esp8266",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/cores/esp8266/libb64",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/cores/esp8266/spiffs",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/cores/esp8266/umm_malloc",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ArduinoOTA",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/DNSServer/src",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/EEPROM",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/esp8266/src",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ESP8266AVRISP/src",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ESP8266HTTPClient/src",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ESP8266httpUpdate/src",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ESP8266HTTPUpdateServer/src",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ESP8266mDNS",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ESP8266SSDP",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ESP8266WebServer/src/detail",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ESP8266WebServer/src",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ESP8266WiFi/src",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ESP8266WiFi/src/include",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ESP8266WiFi/src",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ESP8266WiFiMesh/src",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/Ethernet/examples/udpntpclient_pedantic",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/Ethernet/src",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/Ethernet/src/utility",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/GDBStub/src",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/GDBStub/src/internal",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/GDBStub/src/xtensa/config",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/GDBStub/src/xtensa",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/Hash/src",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/Hash/src/sha1",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/SD/src",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/SD/src/utility",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/Servo/src/esp8266",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/Servo/src",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/SoftwareSerial",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/SPI",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/TFT_Touch_Shield_V2",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/Ticker",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/Wire",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/tools/sdk/include",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/tools/sdk/include/json",
+                "${workspaceRoot}"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE"
+            ],
+            "intelliSenseMode": "clang-x64",
+            "browse": {
+                "path": [
+                    "C:/Users/mrgoo/Documents/Arduino/libraries",
+                    "C:/Users/mrgoo/AppData/Local/Arduino15/packages/esp8266",
+                    "${workspaceRoot}"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            }
+        }
+    ],
+    "version": 3
+}
