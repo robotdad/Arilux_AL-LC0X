@@ -12,15 +12,15 @@
 #define ARILUX_WHITE2_PIN         13
 #define ARILUX_COLOR_STRING       "RGBWW"
 #elif defined(RGBW)
-#define ARILUX_RED_PIN            5
-#define ARILUX_GREEN_PIN          14
-#define ARILUX_BLUE_PIN           12
-#define ARILUX_WHITE1_PIN         13
+#define ARILUX_RED_PIN             5  //LC2 v1.4:  5 v2.0: 5
+#define ARILUX_GREEN_PIN          12  //LC2 v1.4: 14 v2.0: 12
+#define ARILUX_BLUE_PIN           13  //LC2 v1.4: 12 v2.0: 13
+#define ARILUX_WHITE1_PIN         15  //LC2 v1.4: 13 v2.0: 15
 #define ARILUX_COLOR_STRING       "RGBW"
 #else
-#define ARILUX_RED_PIN            14
-#define ARILUX_GREEN_PIN          5
-#define ARILUX_BLUE_PIN           12
+#define ARILUX_RED_PIN             5 //LC9 v1:  5
+#define ARILUX_GREEN_PIN          14 //LC9 v1: 14
+#define ARILUX_BLUE_PIN           12 //LC9 v1: 12
 #define ARILUX_COLOR_STRING       "RGB"
 #endif
 
