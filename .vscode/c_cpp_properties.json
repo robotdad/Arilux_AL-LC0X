@@ -74,6 +74,8 @@
                 "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/cores/esp8266/libb64",
                 "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/cores/esp8266/spiffs",
                 "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/cores/esp8266/umm_malloc",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/cores/variants",
+                "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/cores/variants/generics",
                 "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/ArduinoOTA",
                 "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/DNSServer/src",
                 "${env.LOCALAPPDATA}/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/libraries/EEPROM",
@@ -121,9 +123,11 @@
                 "path": [
                     "C:/Users/mrgoo/Documents/Arduino/libraries",
                     "C:/Users/mrgoo/AppData/Local/Arduino15/packages/esp8266",
+                    "C:/Users/mrgoo/AppData/Local/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/cores/esp8266",
+                    "C:/Users/mrgoo/AppData/Local/Arduino15/packages/esp8266/hardware/esp8266/2.3.0/cores/variants",
                     "${workspaceRoot}"
                 ],
-                "limitSymbolsToIncludedHeaders": true,
+                "limitSymbolsToIncludedHeaders": false,
                 "databaseFilename": ""
             }
         }

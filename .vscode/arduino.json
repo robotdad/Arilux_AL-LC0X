@@ -1,0 +1,5 @@
+{
+    "board": "esp8266:esp8266:esp8285",
+    "configuration": "CpuFrequency=80,UploadSpeed=115200,FlashSize=1M512",
+    "sketch": "Arilux_AL-LC0X.ino"
+}
