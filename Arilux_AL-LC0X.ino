@@ -108,9 +108,9 @@ PubSubClient        mqttClient(wifiClient);
 #endif
 
 // Real values to write to the LEDs (ex. including brightness and state)
-byte realRed = 255;     // somewhat better when only using toggle switch 
-byte realGreen = 255;   // temporary until color persistence is implemented 
-byte realBlue = 255;    // 
+byte realRed = 255;     
+byte realGreen = 255;   
+byte realBlue = 255;     
 
 // Globals for fade/transitions
 bool startFade = false;
@@ -558,7 +558,7 @@ void connectMQTT(void) {
           root.printTo(configBuf, sizeof(configBuf));
           publishToMQTT(HOME_ASSISTANT_MQTT_DISCOVERY_TOPIC, configBuf);
         #endif
-//        flashSuccess(true);  // this kind of screws up the initial state
+//        flashSuccess(true);  // Uncomment for debugging using the lights
       } else {
         DEBUG_PRINTLN(F("ERROR: The connection to the MQTT broker failed"));
         DEBUG_PRINT(F("Username: "));
@@ -567,7 +567,7 @@ void connectMQTT(void) {
         DEBUG_PRINTLN(MQTT_PASS);
         DEBUG_PRINT(F("Broker: "));
         DEBUG_PRINTLN(MQTT_SERVER);
-        flashSuccess(false);
+//        flashSuccess(false); // Uncomment for debugging using the lights
       }
 
 #ifdef JSON
@@ -942,6 +942,12 @@ void setupWiFi() {
 //  SETUP() AND LOOP()
 ///////////////////////////////////////////////////////////////////////////
 void setup() {
+
+  // Init the Arilux LED controller and turn on the lights first
+  arilux.init();
+  arilux.turnOn();
+  cmd = ARILUX_CMD_STATE_CHANGED;
+  
   Serial.begin(115200);
   delay(500);
 
@@ -961,10 +967,6 @@ void setup() {
 
   // Setup Wi-Fi
   setupWiFi();
-
-  // Init the Arilux LED controller
-  if (arilux.init())
-    cmd = ARILUX_CMD_STATE_CHANGED;
 
 #ifdef IR_REMOTE
   // Start the IR receiver
