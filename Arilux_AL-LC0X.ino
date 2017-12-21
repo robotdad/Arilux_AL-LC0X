@@ -945,6 +945,11 @@ void setup() {
 
   // Init the Arilux LED controller and turn on the lights first
   arilux.init();
+  arilux.setColor(255,60,0);
+  arilux.setBrightness(120);
+  #if defined(RGBW) || defined (RGBWW)
+    arilux.setWhite(150, 0);
+  #endif
   arilux.turnOn();
   cmd = ARILUX_CMD_STATE_CHANGED;
   
@@ -959,8 +964,8 @@ void setup() {
 
   sprintf(chipid, "%08X", ESP.getChipId());
   sprintf(MQTT_CLIENT_ID, HOST, chipid);
-  //sprintf(friendlyName, "Arilux %s %s LED Controller %s", DEVICE_MODEL, arilux.getColorString(), chipid);
-  sprintf(friendlyName, "What it does");  
+  //sprintf(friendlyName, "Arilux %s %s LED Controll-er %s", DEVICE_MODEL, arilux.getColorString(), chipid);
+  sprintf(friendlyName, "Bar cabinet");  
   Serial.print("Hostname:");
   Serial.println(MQTT_CLIENT_ID);
   WiFi.hostname(MQTT_CLIENT_ID);
